@@ -16,7 +16,7 @@ const playerLastChoice = document.getElementById("playerLastChoice");
 const computerLastChoice = document.getElementById("computerLastChoice");
 const lastGameWinner = document.getElementById("lastGameWinner");
 
-// INITIALIZING VARIABLES
+// INITIALIZING GLOBAL VARIABLES
 
 let gamesPlayed = gamesPlayedCounter.textContent;
 let wins = winsCounter.textContent;
@@ -27,7 +27,57 @@ let yourChoice = playerLastChoice.textContent;
 let computerChoice = computerLastChoice.textContent;
 let winnerIs = lastGameWinner.textContent;
 
+// FUNCTIONS START HERE
 
+function YUNoInitialize(){
+    if (winnerIs.textContent === "THE GAME HASN'T STARTED YET"){
+        return true} else {
+            return false}
+        }
+
+gameStart.onclick = function(){
+    gamesPlayed = gamesPlayedCounter.textContent = 0;
+    wins = winsCounter.textContent = 0;
+    loses = losesCounter.textContent = 0;
+    draws = drawsCounter.textContent = 0;
+
+    yourChoice = playerLastChoice.textContent = "NONE";
+    computerChoice = computerLastChoice.textContent = "NONE";
+    winnerIs = lastGameWinner.textContent = "N/A";
+}
+
+
+
+
+rockButton.onclick = function(){
+    if (YUNoInitialize === true){
+        alert("You have to initialize the game first...")
+     } else {
+        yourChoice = "rock";
+        computerChoice = rollComputerChoice;
+    }
+}
+
+paperButton.onclick = function(){
+    if (YUNoInitialize){
+        alert("You have to initialize the game first...")
+    } else {
+        yourChoice = "paper";
+        computerChoice = rollComputerChoice;
+    }
+}
+scissorsButton.onclick = function(){
+    if (YUNoInitialize){
+        alert("You have to initialize the game first...")
+    } else {
+        yourChoice = "scissors";
+        computerChoice = rollComputerChoice;
+    }
+}
+
+function rollComputerChoice(){
+    alert('This does nothing yet...')
+}
 
 // CONSOLE LOGS FOR TESTING
 console.log(gamesPlayed);
@@ -38,17 +88,3 @@ console.log(yourChoice);
 console.log(computerChoice);
 console.log(winnerIs);
 
-/* BUTTON TESTING SPACE      * /
-gameStart.onclick = function(){
-    alert("Chuj ci w dupę!")
-}
-rockButton.onclick = function(){
-    alert("Ruchaj kamień z dziurką!")
-}
-paperButton.onclick = function(){
-    alert("Może chusteczkę?")
-}
-scissorsButton.onclick = function(){
-    alert("Zaraz Ci obetniemy XD")
-}
- / *  BUTTON TESTING SPACE END */
