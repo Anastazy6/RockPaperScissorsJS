@@ -66,6 +66,27 @@ button {
     margin-top: 30px; 
 }
 
+.buttonFont {
+    display: inline-block;
+    position: relative;
+    margin-left: 3.4%;
+    margin-top: 30px; 
+    overflow: hidden;
+}
+#fontComicSans {
+    font-family: "Comic Sans MS", sans-serif;
+}
+#fontHelvetica {
+    font-family: Helvetica, sans-serif;
+}
+#fontTMR {
+    font-family: "Times New Roman", serif;
+    font-size: 0.93em;
+}
+#fontConsolas {
+    font-family: "Consolas", monospace;
+}
+
 #startRestartGame {
     position: relative;
     left: 40.2%;

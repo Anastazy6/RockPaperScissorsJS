@@ -125,7 +125,32 @@ function updateContent(){
     playerLastChoice.textContent = yourChoice;
     computerLastChoice.textContent = computerChoice;
     lastGameWinner.textContent = winnerIs;
+}  // And it's done. Now let's allow the user to change fonts.
+
+const useComicSans = document.getElementById("fontComicSans");
+const useHelvetica = document.getElementById("fontHelvetica");
+const useTMR = document.getElementById("fontTMR");
+const useConsolas = document.getElementById("fontConsolas");
+const generalPage = document.querySelector("html");
+const fontIndicator = document.getElementById("currentFont");
+
+useComicSans.onclick = function(){
+    generalPage.style.fontFamily = '"Comic Sans MS", sans-serif';
+    fontIndicator.textContent = "Comic Sans";
 }
+useHelvetica.onclick = function(){
+    generalPage.style.fontFamily = 'Helvetica, sans-serif';
+    fontIndicator.textContent = "Helvetica";
+}
+useTMR.onclick = function(){
+    generalPage.style.fontFamily = '"Times New Roman", serif'
+    fontIndicator.textContent = "Times New Roman";
+}
+useConsolas.onclick = function(){
+    generalPage.style.fontFamily = '"Consolas", monospace';
+    fontIndicator.textContent = "Consolas";
+}
+
 
 //alert("You have chosen " + yourChoice + "\nThe computer has chosen " + computerChoice)
 
